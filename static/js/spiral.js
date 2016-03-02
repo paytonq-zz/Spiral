@@ -1,14 +1,12 @@
 window.onload = function() {
-  document.getElementById('testid').innerHTML = "Inline JS Success!";
-
   $.ajax({
       url: 'http://127.0.0.1:8000/game/hello/',
-      type: 'get', // This is the default though, you don't actually need to always mention it
+      type: 'get',
       success: function(data) {
-          alert(data);
+          $('#ajaxVerify').html(data);
       },
       failure: function(data) {
-          alert('Got an error dude');
+          alert('Error.');
       }
   });
 }

@@ -1,0 +1,245 @@
+#wrapper {
+  width:654px;
+  height:654px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#circle {
+    width: 652px;
+    height: 652px;
+    border-radius: 50% 50%;
+    border: 1px solid black;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.segment {
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  pointer-events: auto;
+}
+
+.segment:hover div.lbl {
+    display: block;
+}
+
+.segment:hover {
+    background: orange;
+}
+
+.segmentOuter {
+    border-radius: 400px 0 0 400px;
+/*border-top: 1px solid black;
+    border-right: 1px solid black;*/
+    width: 326px;
+    height: 652px;
+    top: 1px;
+    left: 1px;
+
+}
+
+.wrapperSegment {
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wrapperSegmentOuter {
+    width: 326px;
+    height: 652px;
+    top: 1px;
+    left: 1px;
+}
+
+.s2 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.s3 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.s4 {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.s5 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.s6 {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+.s7 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.s8 {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+
+#circleMiddle {
+    width: 489px;
+    height: 489px;
+    left:83px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50% 50%;
+    position: absolute;
+    top: 83px;
+}
+
+
+.segmentMiddle {
+    border-radius: 300px 0 0 300px;
+    /*border-top: 1px solid black;
+    border-right: 1px solid black;*/
+    width: 245px;
+    height: 489px;
+    left:83px;
+    top:84px;
+
+}
+
+.wrapperSegmentMiddle {
+    width: 245px;
+    height: 489px;
+    left:83px;
+    top:84px;
+}
+
+
+#circleMiddleInner {
+    width: 326px;
+    height: 326px;
+    left:163px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50% 50%;
+    position: absolute;
+    top: 163px;
+}
+
+
+.segmentMiddleInner {
+    border-radius: 300px 0 0 300px;
+    /*border-top: 1px solid black;
+    border-right: 1px solid black;*/
+    width: 163px;
+    height: 326px;
+    left:164px;
+    top:164px;
+
+}
+
+.wrapperSegmentMiddleInner {
+    width: 163px;
+    height: 326px;
+    left:164px;
+    top:164px;
+}
+
+
+
+#circleInner {
+    width: 163px;
+    height: 163px;
+    left:245px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50% 50%;
+    position: absolute;
+    top: 245px;
+}
+
+
+.segmentInner {
+    border-radius: 163px 0 0 163px;
+    /*border-top: 1px solid black;
+    border-right: 1px solid black;*/
+    width: 82px;
+    height: 163px;
+    left:245px;
+    top:246px;
+
+}
+
+.wrapperSegmentInner {
+    width: 82px;
+    height: 163px;
+    left:245px;
+    top:246px;
+}
+
+
+
+.arrayLocation {
+    display: none;
+    position: absolute;
+    width: 75px;
+    top: 0px;
+    border: 1px solid black;
+    padding: 14px;
+    font-family:Arial;
+}
+
+#viewVerify {
+  top: 50px;
+  position: absolute;
+}
+
+#ajaxVerify {
+  top: 70px;
+  position: absolute;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0 auto;
+  padding:0;
+}

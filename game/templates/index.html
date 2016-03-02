@@ -3,11 +3,94 @@
     {% load staticfiles %}
     <script type="text/javascript" src="{% static "js/jquery-2.2.1.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/spiral.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
     <title>Spiral</title>
   </head>
 
   <body>
-    <h1>Hello {{ name }}, welcome to my awesome site</h1>
-    <h1 id='testid'></h1>
-  </body>
+    <h3 id="viewVerify">{{ verify }}</h3>
+    <h3 id="ajaxVerify"></h3>
+
+    <div id="wrapper">
+      <div id="circle"></div>
+      <div class="wrapperSegmentOuter wrapperSegment s1" id="s1"><div class="segmentOuter segment" id="ss1"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s2" id="s2"><div class="segmentOuter segment" id="ss2"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s3" id="s3"><div class="segmentOuter segment" id="ss3"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s4" id="s4"><div class="segmentOuter segment" id="ss4"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s5" id="s5"><div class="segmentOuter segment" id="ss5"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s6" id="s6"><div class="segmentOuter segment" id="ss6"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s7" id="s7"><div class="segmentOuter segment" id="ss7"></div></div>
+      <div class="wrapperSegmentOuter wrapperSegment s8" id="s8"><div class="segmentOuter segment" id="ss8"></div></div>
+
+      <div id="circleMiddle"></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s1" id="s1m"><div class="segmentMiddle segment" id="ss1m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s2" id="s2m"><div class="segmentMiddle segment" id="ss2m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s3" id="s3m"><div class="segmentMiddle segment" id="ss3m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s4" id="s4m"><div class="segmentMiddle segment" id="ss4m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s5" id="s5m"><div class="segmentMiddle segment" id="ss5m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s6" id="s6m"><div class="segmentMiddle segment" id="ss6m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s7" id="s7m"><div class="segmentMiddle segment" id="ss7m"></div></div>
+      <div class="wrapperSegmentMiddle wrapperSegment s8" id="s8m"><div class="segmentMiddle segment" id="ss8m"></div></div>
+
+      <div id="circleMiddleInner"></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s1" id="s1mi"><div class="segmentMiddleInner segment" id="ss1mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s2" id="s2mi"><div class="segmentMiddleInner segment" id="ss2mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s3" id="s3mi"><div class="segmentMiddleInner segment" id="ss3mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s4" id="s4mi"><div class="segmentMiddleInner segment" id="ss4mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s5" id="s5mi"><div class="segmentMiddleInner segment" id="ss5mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s6" id="s6mi"><div class="segmentMiddleInner segment" id="ss6mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s7" id="s7mi"><div class="segmentMiddleInner segment" id="ss7mi"></div></div>
+      <div class="wrapperSegmentMiddleInner wrapperSegment s8" id="s8mi"><div class="segmentMiddleInner segment" id="ss8mi"></div></div>
+
+      <div id="circleInner"></div>
+      <div class="wrapperSegmentInner wrapperSegment s1" id="s1i"><div class="segmentInner segment" id="ss1i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s2" id="s2i"><div class="segmentInner segment" id="ss2i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s3" id="s3i"><div class="segmentInner segment" id="ss3i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s4" id="s4i"><div class="segmentInner segment" id="ss4i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s5" id="s5i"><div class="segmentInner segment" id="ss5i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s6" id="s6i"><div class="segmentInner segment" id="ss6i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s7" id="s7i"><div class="segmentInner segment" id="ss7i"></div></div>
+      <div class="wrapperSegmentInner wrapperSegment s8" id="s8i"><div class="segmentInner segment" id="ss8i"></div></div>
+
+    </div>
+
+    <div id="ss1arrayLocation" class="arrayLocation">outer1</div>
+    <div id="ss2arrayLocation" class="arrayLocation">outer2</div>
+    <div id="ss3arrayLocation" class="arrayLocation">outer3</div>
+    <div id="ss4arrayLocation" class="arrayLocation">outer4</div>
+    <div id="ss5arrayLocation" class="arrayLocation">outer5</div>
+    <div id="ss6arrayLocation" class="arrayLocation">outer6</div>
+    <div id="ss7arrayLocation" class="arrayLocation">outer7</div>
+    <div id="ss8arrayLocation" class="arrayLocation">outer8</div>
+
+    <div id="ss1marrayLocation" class="arrayLocation">mid1</div>
+    <div id="ss2marrayLocation" class="arrayLocation">mid2</div>
+    <div id="ss3marrayLocation" class="arrayLocation">mid3</div>
+    <div id="ss4marrayLocation" class="arrayLocation">mid4</div>
+    <div id="ss5marrayLocation" class="arrayLocation">mid5</div>
+    <div id="ss6marrayLocation" class="arrayLocation">mid6</div>
+    <div id="ss7marrayLocation" class="arrayLocation">mid7</div>
+    <div id="ss8marrayLocation" class="arrayLocation">mid8</div>
+
+    <div id="ss1miarrayLocation" class="arrayLocation">midinner1</div>
+    <div id="ss2miarrayLocation" class="arrayLocation">midinner2</div>
+    <div id="ss3miarrayLocation" class="arrayLocation">midinner3</div>
+    <div id="ss4miarrayLocation" class="arrayLocation">midinner4</div>
+    <div id="ss5miarrayLocation" class="arrayLocation">midinner5</div>
+    <div id="ss6miarrayLocation" class="arrayLocation">midinner6</div>
+    <div id="ss7miarrayLocation" class="arrayLocation">midinner7</div>
+    <div id="ss8miarrayLocation" class="arrayLocation">midinner8</div>
+
+    <div id="ss1iarrayLocation" class="arrayLocation">inner1</div>
+    <div id="ss2iarrayLocation" class="arrayLocation">inner2</div>
+    <div id="ss3iarrayLocation" class="arrayLocation">inner3</div>
+    <div id="ss4iarrayLocation" class="arrayLocation">inner4</div>
+    <div id="ss5iarrayLocation" class="arrayLocation">inner5</div>
+    <div id="ss6iarrayLocation" class="arrayLocation">inner6</div>
+    <div id="ss7iarrayLocation" class="arrayLocation">inner7</div>
+    <div id="ss8iarrayLocation" class="arrayLocation">inner8</div>
+
+
+</body>
 </html>
