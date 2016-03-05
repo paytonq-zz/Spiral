@@ -9,4 +9,14 @@ window.onload = function() {
           alert('Error.');
       }
   });
+  $.ajax({
+      url: 'http://127.0.0.1:8000/game/getsessionid/',
+      type: 'get',
+      success: function(data) {
+          $('#sessionVerify').html('Session ' + data);
+      },
+      failure: function(data) {
+          alert('Error.');
+      }
+  });
 }
